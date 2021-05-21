@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bolt clone</title>
+    <link rel="icon" type="image/png" href="./public/images/favicon.ico/bolt-icon-header.png">
+    <link href="public/css/style.css" rel="stylesheet" type="text/css">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <header x-data="{mobileMenuOpen: false}">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex items-center justify-between sm:justify-start space-x-10 px-6 sm:px-0">
+                <a class="py-4" href="#"> <img src="./public/images/bolt-logo.svg" alt="bolt-logo"></a>
+                <div class="hidden sm:flex items-center space-x-10">
+                    <div class="flex text-lg active:bg-gray-500">
+                        <a class="hover:bg-gray-200 p-6" href="#">Ride</a>
+                        <a class="hover:bg-gray-200 p-6" href="#">Drive</a>
+                        <a class="hover:bg-gray-200 p-6" href="#">Fleet</a>
+                        <a class="hover:bg-gray-200 p-6" href="#">Business</a>
+                        <a class="hover:bg-gray-200 p-6" href="#">Food</a>
+                        <a class="hover:bg-gray-200 p-6" href="#">Cities</a>
+                    </div>
+                </div>
+                <button @click="mobileMenuOpen = !mobileMenuOpen" type="button" class="text-green-400 block sm:hidden cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0   24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                <div x-show="mobileMenuOpen" class="inset-x-0 absolute">
+                    <div class="text-lg active:bg-gray-500">
+                        <a class="block bg-white hover:bg-gray-200 p-6" href="#">Ride</a>
+                        <a class="block bg-white hover:bg-gray-200 p-6" href="#">Drive</a>
+                        <a class="block bg-white hover:bg-gray-200 p-6" href="#">Fleet</a>
+                        <a class="block bg-white hover:bg-gray-200 p-6" href="#">Business</a>
+                        <a class="block bg-white hover:bg-gray-200 p-6" href="#">Food</a>
+                        <a class="block bg-white hover:bg-gray-200 p-6" href="#">Cities</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- intro-section -->
+        <section id="intro" class="bg-green-400">
+                <div class="max-w-md md:max-w-4xl lg:max-w-7xl mx-auto">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 items-center">
+                        <div class="text-white justify-between">
+                                <h1 class="text-6xl font-bold my-6 mx-2 mt-6">The fast,<br> affordable way<br> to ride.</h1>
+                                <p class="mb-4">Download the Bolt app</p>
+                            <div class="flex items-center pb-6">
+                                <img class="w-15 h-10" src="./public/images/app-store-icon.svg" alt="app-store-icon">
+                                <img class="w-15 h-14" src="./public/images/google-playstore.svg" alt="google-playstore">
+                            </div>
+                                <a class="text-lg" href="#">REQUEST A RIDE ONLINE &rarr;</a>
+                        </div>  
+                        <div>
+                            <img class="" src="./public/images/index-header.jpg" alt="lady">
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <!-- sign-up section -->
+        <section id="sign-up" class="bg-blue-400 bg-opacity-100">
+            <div class="max-w-md md:max-w-2 lg:max-w-4xl mx-auto py-40">
+                <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-4 lg:space-x-12 text-center sm:text-left">
+                    <div class="text-white">
+                        <h2 class="text-2xl font-bold pb-3">Earn extra money driving</h2>
+                        <p class="text-lg">Set your own schedule,be your own boss.</p>
+                    </div>
+                        <div>
+                            <a href="#" class="inline-block px-8 py-4 text-center text-xsm font-semibold rounded-full bg-white">SIGN UP TO DRIVE</a>
+                        </div>
+                </div>
+            </div>
+        </section>
+        <!-- feature-section -->
+        <section id="feature">
+            <div class="max-w-md md:max-w-4xl lg:max-w-7xl mx-auto py-20">
+                <div class="grid grid-cols-1 lg:grid-cols-3 items-center space-x-12">
+                    <div class="ml-6 mb-10">
+                        <img class="w-36 pb-4" src="./public/images/car.svg" alt="car">
+                        <h2 class="text-2xl font-bold">Get a ride</h2>
+                        <p class="text-gray-500 text-lg">Bolt offers you a ride in minutes.</p>
+                    </div>
+                    <div class="ml-4 mb-10">
+                        <img class="w-36 pb-4" src="./public/images/wallet.svg" alt="wallet">
+                        <h2 class="text-2xl font-bold">The best prices</h2>
+                        <p class="text-gray-500 text-lg">We aim to offer the best ride prices in every city.See for yourself!</p>
+                    </div>         
+                    <div>
+                        <img class="h-36 pb-4" src="./public/images/small-phone.svg" alt="small-phone">
+                        <h2 class="text-2xl font-bold">Easy to use</h2>
+                        <p class="text-gray-500 text-lg">Get wherever you need to go as quickly as possible.</p>
+                    </div>
+                </div>         
+            </div>
+        </section>
+        <!-- hero-section -->
+        <section id="hero" class="bg-green-100">
+            <div class="max-w-md md:max-w-4xl lg:max-w-7xl mx-auto py-20">
+                <div class="grid grid-cols-1 lg:grid-cols-2 items-center space-x-10">
+                    <div class="text-center">
+                        <h5 class="text-5xl font-bold pb-10">Get a ride in minutes!</h5>
+                        <p class="text-gray-500 text-md-center">Pick your destination,request a ride,meet your driver,enjoy the journey.</p>
+                    </div>
+                        <img class="max-h-300 pt-8 pr-10" src="./public/images/bolt-car.jpg" alt="bolt-car">
+                </div>
+            </div>
+        </section>
+        <!-- testimonials-section -->
+        <section id="testimonials">
+            <div class="max-w-md md:max-w-4xl lg:max-w-7xl mx-auto py-36">
+                <div class="grid grid-cols-1 lg:grid-cols-3 items-center space-x-12">
+                    <div class="mx-10 mb-6">
+                        <img class="pb-4" src="./public/images/small-car.svg" alt="small-car">
+                        <h5 class="text-2xl font-bold pb-2">Safe and convenient</h5>
+                        <p class="text-gray-500 text-lg">Moving with Bolt is easy,convenient and fast.</p>
+                    </div>
+                    <div class="mb-6">
+                        <img class="pb-4" src="./public/images/heart.svg" alt="heart">
+                        <h5 class="text-2xl font-bold pb-2">Happy drivers,happy riders</h5>
+                        <p class="text-gray-500 text-lg">Bolt drivers earn more thanks to lower commission rates.</p>
+                    </div>
+                    <div>
+                        <img class="pb-4" src="./public/images/telephone.svg" alt="telephone">
+                        <h5 class="text-2xl font-bold pb-2">Always there for you</h5>
+                        <p class="text-gray-500 text-lg">Get fast support,whenver you need it.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- alert-section -->
+        <section id="alert-section" class="bg-green-400 ml-1">
+            <div class="max-w-md md:max-w-4xl lg:max-w-2xl mx-auto py-20">
+                <h6 class="text-white text-4xl font-bold pb-6">Ready to ride?</h6>
+                <div class="flex items-center">
+                    <img class="w-15 h-10"  src="./public/images/app-store-icon.svg" alt="app-store-icon">
+                    <img class="w-15 h-14" src="./public/images/google-playstore.svg" alt="google-playstore">
+                </div>
+                    <a class="text-white text-lg" href="#">Or sign up to start driving.</a>
+            </div>  
+        </section>
+    </main>
+    <!-- FOOTER-SECTION -->
+    <footer>
+    <section id="footer">
+        <div class="max-w-md md:max-w-4xl lg:max-w-7xl mx-auto py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-3 space-x-20">
+                <div>
+                    <div>
+                        <img src="./public/images/bolt-logo.svg" alt="bolt-logo">
+                    </div> 
+                    <div class="flex items-center gap-2 py-10">
+                        <img class="w-36 h-10" src="./public/images/app-store-icon.svg" alt="app-store-icon">     
+                        <img class="w-30 h-16 -m-2.5" src="./public/images/google-playstore.svg" alt="google-playstore">     
+                        <img class="w-32 h-10" src="./public/images/app-gallery.png" alt="app-gallery">
+                    </div>
+                    <div class="flex gap-2">
+                        <img class="h-6" src="./public/images/question-mark.svg" alt="question-mark">
+                        <p class="pb-6 text-lg font-semibold text-gray-700">Help Center</p>
+                    </div>
+                    <div class="flex gap-2">
+                        <img src="./public/images/icon.svg" alt="icon">
+                        <p class="text-lg font-semibold text-gray-700">English Kenya</p>
+                    </div>
+                </div>
+    
+                <div class="pt-6">
+                    <h2 class="text-lg font-bold">Our Products</h2>
+                        <ul>
+                            <li><a href="#">Ride</a></li>
+                            <li><a href="#">Business</a></li>
+                            <li><a href="#">Food</a></li>
+                            <li><a href="#">Drive</a></li>
+                            <li><a href="#">Fleet</a></li>
+                            <li><a href="#">Scooters</a></li>
+                            <li><a href="#">Scooters Platform</a></li>
+                            <li><a href="#">Dispatch Software</a></li>
+                            <li><a href="#">Franchise</a></li>
+                            <li><a href="#">Influencers</a></li>
+                            <li><a href="#">Request Bolt Online</a></li>
+                        </ul>
+                </div>
+                <div class="pt-6">
+                    <h3 class="text-lg font-bold">About us</h3>
+                        <ul>
+                            <li><a href="#">Airports</a></li>
+                            <li><a href="#">Green Plan</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Cities</a></li>
+                            <li><a href="#">Press</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contacts</a></li>
+                        </ul>
+                </div>
+            </div>
+            <div class="max-w-md md:max-w-4xl lg:max-w-7xl mx-auto py-36">
+                <div class="grid grid-cols-1 lg:grid-cols-2 justify-between">
+                        <p>&copy;2021 Bolt Technology OU Legal Cookie Declaration</p>
+                    <div class="flex space-x-4">
+                        <img src="./public/images/facebook-icon.svg" alt="facebook-icon"> 
+                        <img src="./public/images/twitter-icon.svg" alt="twitter-icon">
+                        <img src="./public/images/instagram-icon.svg" alt="instagram-icon">
+                        <img src="./public/images/linkedIn-icon.svg" alt="linkedIn-icon">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </footer>
+<script></script>
+</body> 
+
+<!-- example -->
+<img class='object-cover object-center w-full h-20' src="https://images.unsplash.com/photo-1616696269320-a4b68a57b1c1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
